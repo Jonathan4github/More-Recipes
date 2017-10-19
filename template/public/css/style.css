@@ -1,0 +1,70 @@
+.parallax-container{
+color: rgba(255,255,255,.9);
+}
+
+ /* label color */
+   .input-field label {
+     color: #c2185b;
+   }
+
+   /* label focus color */
+   .input-field input:focus + label {
+   color: #ad1457 !important;
+ }
+ /* label underline focus color */
+ .row .input-field input:focus {
+   border-bottom: 1px solid #ad1457 !important;
+   box-shadow: 0 1px 0 0 #ad1457 !important
+ }
+   
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #c2185b;
+     box-shadow: 204 1px 23 12 #c2185b;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 0px solid #c2185b;
+     box-shadow: 204 1px 12 45 #c2185b;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #c2185b;
+   }
+   
+   /*changing materialize default icon color*/
+   .material-icons {
+  color:#bdbdbd;
+  }
+  /*material icon to pink darken-3 color*/
+  .material-icons-pink{
+	  color:#ad1457;
+  }
+  /*
+  .material-icons.active {
+      color: your color of choice;
+    }
+  */
+  
+  header, main, footer {
+      padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+	
+	/* main container style*/
+	.main-container{
+		border-radius:10px;		
+		margin-top:20px;
+		padding:20px;
+	}
+    /*align icon with text*/
+	.material-icons-align {
+      vertical-align:-5px;
+    }
+
+   
