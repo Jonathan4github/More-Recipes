@@ -14,15 +14,18 @@
 <body>
 
     <nav class="pink darken-3" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="index.html" class="brand-logo"></a>
+        <div class="nav-wrapper">
             <!-- Navigation menu for full screen-->
             <ul class="right hide-on-med-and-down">
-                <li><a href="dashboard.html"><i class="material-icons left">bubble_chart</i>Dashboard</a></li>
-                <li><a href="#"><i class="material-icons left">edit</i>Edit profile</a></li>
+                <li><input type="text" placeholder="search"></li>
+                <li><a href="#"><i class="material-icons left">search</i></a></li>
+            </ul>
+            <ul class="left ">
+                <li><a id="logo-container" href="index.html" style="font-size:25px;">More Recipes</a></li>
             </ul>
             <!-- Navigation view for mobile view -->
-            <ul id="side-out" class="grey lighten-3 side-nav fixed">
+            <ul id="side-out" class="grey lighten-3 side-nav">
+
                 <li>
                     <div class="user-view">
                         <div class="background">
@@ -33,24 +36,35 @@
                         <a href="#!email"><span class="white-text email">dorcas@gmail.com</span></a>
                     </div>
                 </li>
-                <li><a href="dashboard.html"><i class="material-icons left">bubble_chart</i>Dashboard</a></li>
-                <li><a href="#"><i class="material-icons left">edit</i>Edit profile</a></li>
-
-                <div class="divider"></div>
+                <li><a class="pink-text text-darken-3"><i class="material-icons left">bubble_chart</i>Menu</a></li>
+                <li><a href="recipe_list.html"><i class="material-icons">directions_boat</i>All Recipes</a></li>
+                <li><a href="my_recipes.html"><i class="material-icons">cake</i>My Recipes</a></li>
+                <li><a href="favourites.html"><i class="material-icons">favorite</i>Favourite</a></li>
+                <li><a href="#!"><i class="material-icons">email</i>Notification</a></li>
+                <li>
+                    <div class="divider"></div>
                 </li>
-                <li><a href="index.html">Logout</a></li>
+                <li><a href="profile.html"><i class="material-icons">account_box</i>Profile</a></li>
+                <li><a href="#!"><i class="material-icons">brightness_low</i>Profile setting</a></li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li><a href="../index.html">Logout</a></li>
 
             </ul>
+
             <a href="#" data-activates="side-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
 
         </div>
     </nav>
+
 
     <!--body section of account-->
     <main>
         <div class="container main-container grey lighten-4">
             <div class="row">
-                <div style=" margin-top:30px; border-radius:0 10px 10px 0;" class="pink darken-3 col s10 m11">
+                <div style=" margin-top:30px; border-radius:10px 10px 10px 10px;" class="pink darken-3 col s12 m12">
                     <div class="col s12 m4">
                         <img class="circle" src="public/images/avatar.jpg " class="responsive-img" style="height:150px; width:150px;">
                     </div>
@@ -90,31 +104,14 @@
             </div>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <footer class="page-footer pink darken-3">
+        <div class="footer-copyright pink darken-3">
+            <div style="padding-left:15px;">
+                Jonathan Williams Copyright © 2017
+                <a class="grey-text text-lighten-4 " href="https://github.com/Jonathan4github/more-recipes ">Andela Boot-camp-28 UI Project</a>
+            </div>
+        </div>
+    </footer>
 
     <!--  Scripts-->
     <script src=" https://code.jquery.com/jquery-2.1.1.min.js "></script>

@@ -14,32 +14,52 @@
 <body>
 
 	<nav class="pink darken-3" role="navigation">
-		<div class="nav-wrapper container">
-			<a id="logo-container" href="#" class="brand-logo">Recipes</a>
+		<div class="nav-wrapper">
 			<!-- Navigation menu for full screen-->
 			<ul class="right hide-on-med-and-down">
-				<li><a href="dashboard.html"><i class="material-icons left">bubble_chart</i>Dashboard</a></li>
+				<li><input type="text" placeholder="search"></li>
+				<li><a href="#"><i class="material-icons left">search</i></a></li>
 			</ul>
+			<ul class="left ">
+				<li><a id="logo-container" href="index.html" style="font-size:25px;">More Recipes</a></li>
+			</ul>
+
 			<!-- Navigation view for mobile view -->
-			<ul class="side-nav" id="nav-mobile">
-				<li><a href="#">Recipes</a></li>
-				<li><a href="#">Register</a></li>
-				<li><a href="login.html">Login</a></li>
+			<ul id="side-out" class="grey lighten-3 side-nav">
+
+				<li>
+					<div class="user-view">
+						<div class="background">
+							<img src="public/images/recipe2.jpg">
+						</div>
+						<a href="#!user"><img class="circle" src="public/images/avatar.jpg"></a>
+						<a href="#!name"><span class="white-text name">Dorcas Williams</span></a>
+						<a href="#!email"><span class="white-text email">dorcas@gmail.com</span></a>
+					</div>
+				</li>
+				<li><a class="pink-text text-darken-3"><i class="material-icons left">bubble_chart</i>Menu</a></li>
+				<li><a href="recipe_list.html"><i class="material-icons">directions_boat</i>All Recipes</a></li>
+				<li><a href="my_recipes.html"><i class="material-icons">cake</i>My Recipes</a></li>
+				<li><a href="favourites.html"><i class="material-icons">favorite</i>Favourite</a></li>
+				<li><a href="#!"><i class="material-icons">email</i>Notification</a></li>
+				<li>
+					<div class="divider"></div>
+				</li>
+				<li><a href="profile.html"><i class="material-icons">account_box</i>Profile</a></li>
+				<li><a href="#!"><i class="material-icons">brightness_low</i>Profile setting</a></li>
+				<li>
+					<div class="divider"></div>
+				</li>
+				<li><a href="../index.html">Logout</a></li>
+
 			</ul>
-			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+			<a href="#" data-activates="side-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+
 		</div>
 	</nav>
 
-	<div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="material-icons prefix">search</i>
-				<input type="text" id="autocomplete-input" class="autocomplete">
-				<label for="autocomplete-input">Enter text to search recipes...</label>
-			</div>
-
-		</div>
-	</div>
 
 	<!-- Recipes Section -->
 	<div class="container">
@@ -240,14 +260,15 @@
 
 	</div>
 
-	<footer class="page-footer ">
-		<div class="footer-copyright ">
-			<div class="container center ">
-				© 2017 Copyright Jonathan Williams
-				<a class="grey-text text-lighten-4 " href="# ">Andela Boot-camp Project</a>
+	<footer class="page-footer pink darken-3">
+		<div class="footer-copyright pink darken-3">
+			<div style="padding-left:15px;">
+				Jonathan Williams Copyright © 2017
+				<a class="grey-text text-lighten-4 " href="https://github.com/Jonathan4github/more-recipes ">Andela Boot-camp-28 UI Project</a>
 			</div>
 		</div>
 	</footer>
+
 
 
 
