@@ -35,9 +35,9 @@ export default class ValidateRecipes {
     if (!(Object.keys(errors).length === 0)) {
       return res.status(400)
         .json(errors);
-    } else {
-      return next();
     }
+    return next();
+
 
   }
 }

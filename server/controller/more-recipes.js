@@ -12,22 +12,21 @@ export default class recipesController {
       */
   static createRecipe(req, res) {
     const { title, ingredients, directions } = req.body;
-    let newRecipeID = recipesDatabase[recipesDatabase.length - 1].id + 1;
-
+    const newRecipeID = recipesDatabase[recipesDatabase.length - 1].id + 1;
     recipesDatabase.push({
       id: newRecipeID,
       title,
       ingredients,
       directions,
       upvote: 0,
-      downvote: 0
+      downvote: 0,
     });
 
     res.status(200)
       .json({
         status: 'Success',
         message: 'Recipe added successfully',
-        recipesDatabase
+        recipesDatabase,
       });
   }
   /**
@@ -38,8 +37,8 @@ export default class recipesController {
        */
   static updateRecipe(req, res) {
     const { title, ingredients, description } = req.body;
-    for (let i = 0; i < recipes.length; i += 1) {
-      if (recipes[i].id === parseInt(req.params.id, 10)) {
+    for (let i = 0; i < recipesDatabase.length; i += 1) {
+      if (recipesDatabase[i].id === parseInt(req.params.id, 10)) {
         if (title || ingredients || description) {
           recipesDatabase[i].title = (title) || recipesDatabase[i].title;
           recipesDatabase[i].ingredients = (ingredients) || recipesDatabase[i].ingredients;
@@ -48,13 +47,13 @@ export default class recipesController {
           res.json({
             status: 'Success',
             message: 'Recipe updated successfully',
-            recipes
+            recipes,
           });
         } else {
           res.status(400);
           res.json({
             status: 'Failed',
-            message: 'Indicate recipe to update'
+            message: 'Indicate recipe to update',
           });
         }
       }
@@ -62,7 +61,7 @@ export default class recipesController {
     res.status(400);
     res.json({
       status: 'Failed',
-      message: 'Recipe ID parameter does not exist'
+      message: 'Recipe ID parameter does not exist',
     });
   }
   /**
@@ -70,7 +69,7 @@ export default class recipesController {
      * @param {obj} req
      * @param {obj} res
      * @returns {obj} insertion error messages or success messages
-     */
+   */
   static deleteRecipe(req, res) {
     if (parseInt(req.params.id, 10) in recipesDatabase.map(recipe => recipe.id)) {
       const newRecipeCatalog = recipesDatabase.filter(recipe => recipe.id !== parseInt(req.params.id, 10));
@@ -78,13 +77,13 @@ export default class recipesController {
       res.json({
         status: 'Success',
         message: 'Successfully deleted recipe',
-        newRecipeCatalog
+        newRecipeCatalog,
       });
     } else {
       res.status(400);
       res.json({
         status: 'Failed',
-        message: 'Recipe ID does not exist'
+        message: 'Recipe ID does not exist',
       });
     }
   }
